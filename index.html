@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Anthropic｜上市研究</title>
 <style>
 :root{color-scheme:light dark;--bg:#edf3f0;--panel:#fff;--ink:#122c23;--muted:#4c6057;--line:#d5e1da;--green:#086946;--orange:#925413}
 @media(prefers-color-scheme:dark){:root{--bg:#12211b;--panel:#1b3026;--ink:#effaf4;--muted:#bed1c6;--line:#435e50;--green:#85dfb2;--orange:#ffc982}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,sans-serif;font-variant-numeric:tabular-nums}main{width:min(calc(100% - 24px),680px);margin:auto;padding:26px 0 40px;display:grid;gap:14px}header{padding:0 4px 5px}h1{font-size:clamp(26px,6vw,38px);line-height:1.18;margin:5px 0 10px}h2{font-size:19px;margin:0 0 6px}p{margin:0 0 8px}p:last-child{margin-bottom:0}small,.muted{font-size:14px;color:var(--muted)}section,details{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0}.lead{font-size:17px}.metric{font-size:28px;font-weight:750;color:var(--green);margin:4px 0}.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}.green{color:var(--green)}.orange{color:var(--orange)}canvas{display:block;width:100%;height:215px;margin:5px 0}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:8px 4px;border-bottom:1px solid var(--line)}th:not(:first-child),td:not(:first-child){text-align:right}summary{cursor:pointer;min-height:34px;font-weight:650}details[open] summary{margin-bottom:6px}a{color:var(--green);text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}dl{margin:6px 0}dl div{display:flex;align-items:baseline;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding:8px 0}dd{font-weight:700;margin:0;text-align:right}footer{padding:0 4px}figure{margin:0}
-</style>
+nav{display:flex;flex-wrap:wrap;gap:4px 12px;padding:0 4px}nav a{min-height:44px;display:inline-flex;align-items:center}main section{scroll-margin-top:12px}section details{padding:8px 0 0;border:0;border-top:1px solid var(--line);border-radius:0}ul{padding-left:20px;margin:5px 0}li+li{margin-top:6px}tbody th{font-weight:500}table th,table td{overflow-wrap:anywhere}</style>
 </head>
 <body>
 <main>
@@ -17,23 +18,26 @@
 <h1>Anthropic 上市研究</h1>
 <p class="lead"><strong>收入增长长期快于算力费用。</strong> Q3 同比收入增 1,127%，算力与基础设施费用增 382%。Q3 环比则是费用增长更快。按 83 美元发行价，摊薄股权价值约 1.51 万亿美元。</p>
 </header>
-<section>
+<nav aria-label="报告目录"><a href="#efficiency">算力效率</a><a href="#customers">客户</a><a href="#profits">盈利</a><a href="#valuation">估值</a><a href="#commitments">付款</a><a href="#ipo">IPO</a><a href="#watch">风险</a></nav><section id="efficiency">
 <h2>每花 1 美元算力费用，产生多少收入？</h2>
 <p class="metric">1.72 美元 <small>Q3 / Q2 为 2.08 美元</small></p>
 <figure>
-<canvas id="ratio" role="img" aria-label="收入除以算力与基础设施费用，从2025年第一季度0.40倍升至2026年第二季度2.08倍，第三季度回落至1.72倍"></canvas>
+<canvas aria-label="收入除以算力与基础设施费用，从2025年第一季度0.40倍升至2026年第二季度2.08倍，第三季度回落至1.72倍" id="ratio" role="img"></canvas>
 <figcaption class="muted">总收入 ÷ 算力与基础设施费用。同比从 <strong>0.68 升至 1.72 倍</strong>，但较 Q2 的 2.08 倍回落约 17%。</figcaption>
 </figure>
 </section>
-<section>
+<section id="growth">
 <h2>收入与算力费用的季度趋势</h2>
 <div class="legend"><span class="green">● 收入</span><span class="orange">● 算力与基础设施费用</span><span class="muted">十亿美元</span></div>
 <figure>
-<canvas id="growth" role="img" aria-label="最近七季收入及算力费用，第三季度收入169.56亿美元，算力费用98.63亿美元"></canvas>
+<canvas aria-label="最近七季收入及算力费用，第三季度收入169.56亿美元，算力费用98.63亿美元" id="growth" role="img"></canvas>
 <figcaption class="muted">Q3 环比，收入增 <strong>46.7%</strong>，算力费用增 <strong>77.5%</strong>。由于收入基数更大，新增收入 54.01 亿美元，仍高于新增算力费用 43.05 亿美元，两者差额扩大 10.96 亿美元。</figcaption>
 </figure>
 </section>
-<section>
+<section id="customers">
+<h2>客户用量支撑增长，也让收入更易波动</h2>
+<p><strong>79%</strong> 的前九个月收入按量计费。API、云市场和 Claude 应用共同变现。</p>
+<p class="muted">截至 Q3，按过去 12 个月消费金额统计。各档客户数包含更高档。</p><table><thead><tr><th scope="col">客户年消费门槛</th><th scope="col">客户数</th></tr></thead><tbody><tr><th scope="row">至少 10 万美元</th><td>超过 11,900 家</td></tr><tr><th scope="row">至少 100 万美元</th><td>超过 1,900 家</td></tr><tr><th scope="row">至少 1,000 万美元</th><td>约 250 家</td></tr></tbody></table><details><summary>护城河与竞争</summary><ul><li><strong>工作流黏性：</strong>Code 和 Cowork 嵌入流程后，迁移涉及权限、工具和评测。单产品收入与留存尚未披露。</li><li><strong>价格压力：</strong>OpenAI、Gemini 和开放权重模型会争夺同一工作负载。观察任务成功率与每次完成任务的成本。</li></ul></details></section><section id="profits"><h2>收入增长还未稳定转成经营利润</h2><p class="muted">季度数据 · 亿美元</p><table><thead><tr><th scope="col">指标</th><th scope="col">Q1</th><th scope="col">Q2</th><th scope="col">Q3</th></tr></thead><tbody><tr><th scope="row">GAAP 经营利润</th><td>−16.67</td><td>9.74</td><td>−5.67</td></tr><tr><th scope="row">调整后经营利润</th><td>−6.17</td><td>22.35</td><td>24.63</td></tr><tr><th scope="row">其他经营与管理费用</th><td>6.83</td><td>10.31</td><td>35.88</td></tr><tr><th scope="row">GAAP 净亏损</th><td>−144.39</td><td>−663.09</td><td>−232.91</td></tr></tbody></table><p><strong>Q3 转亏的原因：</strong>收入减算力费用的差额扩大 10.96 亿美元，但其他经营与管理费用增加 25.57 亿美元。</p><details><summary>净亏损与现金流口径</summary><ul><li>Q3 净亏损 232.91 亿美元，其中 219.36 亿美元为可转债等工具的公允价值变动。</li><li>Q3 调整后经营利润率从 Q2 的 19.3% 降至 14.5%。Q3 调整项含 10.70 亿美元股权激励和 19.60 亿美元非现金慈善捐赠。</li><li>前九个月经营现金流 65.69 亿美元。9 月末现金与短期投资约 1,319 亿美元，未计 IPO。</li></ul></details></section><section id="valuation">
 <h2>83 美元发行价对应的估值</h2>
 <dl>
 <div><dt>发行及私募后已发行股本</dt><dd>1.10 万亿美元</dd></div>
@@ -45,8 +49,8 @@
 <tbody><tr><td>83 美元</td><td>1.51 万亿美元</td><td>42.7 倍</td></tr><tr><td>100 美元</td><td>1.81 万亿美元</td><td>51.4 倍</td></tr><tr><td>120 美元</td><td>2.18 万亿美元</td><td>61.7 倍</td></tr></tbody>
 </table>
 <p class="note muted">按发行价，若市销率回落至假设的 15 倍，同等股权价值需要约 1,004 亿美元年收入，为过去 12 个月已确认收入的 2.85 倍。15 倍为敏感性假设。</p>
-</section>
-<section>
+<details><summary>三种收入分母对应的估值</summary><table><thead><tr><th scope="col">收入分母</th><th scope="col">收入 · 亿美元</th><th scope="col">股权价值／收入</th></tr></thead><tbody><tr><th scope="row">过去 12 个月已确认</th><td>352.82</td><td>42.7 倍</td></tr><tr><th scope="row">Q3 收入 × 4</th><td>678.24</td><td>22.2 倍</td></tr><tr><th scope="row">10 月末公司 Run-Rate</th><td>约 810</td><td>18.6 倍</td></tr></tbody></table><p class="muted">按 83 美元及约 181.38 亿股摊薄股数计算。后两项是年化读数，全年实际收入会不同。</p></details></section>
+<section id="commitments">
 <h2>近期现金压力看未来一年付款</h2>
 <dl>
 <div><dt>未来 12 个月到期</dt><dd>707 亿美元</dd></div>
@@ -54,14 +58,10 @@
 <div><dt>全部期限广义承诺</dt><dd>9,009 亿美元</dd></div>
 </dl>
 <p class="muted">以上为累计口径。披露基准为 9 月末及其后，承诺主要与算力及基建有关。IPO 新股与同期私募预计净募资 1,048 亿美元，仍待交割。融资增加现金缓冲，后续看经营回款能覆盖多少付款。</p>
-</section>
-<section>
-<h2>下一份财报看什么</h2>
-<p>Q3 GAAP 经营结果从盈利 9.74 亿美元转为亏损 5.67 亿美元。同期其他经营与管理费用增加 25.57 亿美元，超过收入减算力费用的差额增量，说明算力效率与整体盈利需要分别看。</p>
-<p><strong>上行验证：</strong>收入继续快于算力费用增长，近期倍数回升，经营现金流同步改善。</p>
-<p><strong>下行信号：</strong>如果倍数连续多个季度下降，同时固定采购付款增加，长期效率改善的判断需要下修。</p>
-<p class="muted">治理与稀释：创始人实体拥有一般事项 50.1% 投票权，长期利益信托通常可选董事会多数。股本还受员工激励、票据转换及公益发行影响。</p>
-</section>
+<details><summary>合同结构与期限</summary><ul><li>未来一年到期额约为 9 月末现金及短期投资的 <strong>54%</strong>。该比例衡量规模，未计回款、营运支出和融资。</li><li>已披露的 Google 托管协议至少约 1,213 亿美元，Microsoft 为 472 亿至 492 亿美元。</li><li>另有不设固定金额的安排，预计支付 1,500 亿至 1,750 亿美元，未纳入 9,009 亿美元。</li><li>部分云伙伴同时提供算力、分销服务和资金。持续扩容最终仍要靠终端客户付费。</li></ul></details></section>
+<section id="ipo"><h2>IPO 增厚现金，也带来新的股本供给</h2><table><thead><tr><th scope="col">发行项目</th><th scope="col">规模</th></tr></thead><tbody><tr><th scope="row">公开发售</th><td>9.80 亿股</td></tr><tr><th scope="row">公开发售总额（含老股）</th><td>813.4 亿美元</td></tr><tr><th scope="row">同期私募</th><td>260 亿美元</td></tr><tr><th scope="row">公司预计净募资（含私募）</th><td>1,048 亿美元</td></tr><tr><th scope="row">超额配售上限</th><td>1.47 亿股</td></tr></tbody></table><p class="muted">招股书口径。公司不获得老股销售款。净募资基准未计超额配售。</p><details><summary>控制权与解禁</summary><ul><li>创始人实体在一般事项享有 50.1% 投票权，长期利益信托通常可选举董事会多数。</li><li>披露锁定期按持有人最长 180 或 365 天，部分股份可提前出售。</li><li>员工期权、RSU、亚马逊票据及公益发行可能影响未来股数。</li></ul></details></section><section id="watch"><h2>投资判断与下一季验证</h2>
+<ul><li><strong>多方：</strong>收入同比快于算力费用。若长期产能按时交付、短期算力溢价下降，经营杠杆有望改善。</li><li><strong>空方：</strong>客户用量和价格可以快速调整，长期采购义务调整更慢。若效率倍数连续下降、付款增加，需要下修盈利和现金流假设。</li><li><strong>看四个读数：</strong>确认收入、收入／算力费用、经营现金流、大客户消费。</li></ul>
+<details><summary>政策与执行风险</summary><ul><li>政府采购争议影响部分政府及承包商准入，范围随相关程序变化。</li><li>模型出口限制与版权索赔可能影响可服务市场及合规成本。</li><li>电网接入和机房交付延迟可能提高短期采购成本。</li></ul><p class="muted">以上为招股书披露的风险，未纳入随后司法、监管或交易进展。</p></details></section>
 <details>
 <summary>数据明细与计算口径</summary>
 <table>
@@ -71,7 +71,7 @@
 <p class="muted">金额单位为亿美元。算力费用包含训练、推理与内部使用。分子是全公司收入，包含订阅等收入。算力投入 ROI 需要可归因的增量利润或现金流，以及对应投入与期间，公司披露不足以测算该指标。</p>
 <p class="muted">市销率分母为截至 Q3 过去 12 个月收入 352.82 亿美元。固定约 181.38 亿股计算价格情景。估值使用发行价，行情未纳入本期。</p>
 </details>
-<footer class="muted">财务截至 2026 年 9 月 30 日。<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书</a> · <a href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering">发行公告</a><br>不构成投资建议。</footer>
+<footer class="muted">财务截至 2026 年 9 月 30 日。<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书</a> · <a href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering">发行公告</a><br/>不构成投资建议。</footer>
 </main>
 <script>
 const labels = ['25Q1', '25Q2', '25Q3', '25Q4', '26Q1', '26Q2', '26Q3'];
