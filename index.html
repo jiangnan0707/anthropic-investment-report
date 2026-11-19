@@ -9,7 +9,7 @@
 :root{color-scheme:light dark;--bg:#edf3f0;--panel:#fff;--ink:#122c23;--muted:#4c6057;--line:#d5e1da;--green:#086946;--orange:#925413}
 @media(prefers-color-scheme:dark){:root{--bg:#12211b;--panel:#1b3026;--ink:#effaf4;--muted:#bed1c6;--line:#435e50;--green:#85dfb2;--orange:#ffc982}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,sans-serif;font-variant-numeric:tabular-nums}main{width:min(calc(100% - 24px),680px);margin:auto;padding:26px 0 40px;display:grid;gap:14px}header{padding:0 4px 5px}h1{font-size:clamp(26px,6vw,38px);line-height:1.18;margin:5px 0 10px}h2{font-size:19px;margin:0 0 6px}p{margin:0 0 8px}p:last-child{margin-bottom:0}small,.muted{font-size:14px;color:var(--muted)}section,details{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0}.lead{font-size:17px}.metric{font-size:28px;font-weight:750;color:var(--green);margin:4px 0}.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}.green{color:var(--green)}.orange{color:var(--orange)}canvas{display:block;width:100%;height:215px;margin:5px 0}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:8px 4px;border-bottom:1px solid var(--line)}th:not(:first-child),td:not(:first-child){text-align:right}summary{cursor:pointer;min-height:34px;font-weight:650}details[open] summary{margin-bottom:6px}a{color:var(--green);text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}dl{margin:6px 0}dl div{display:flex;align-items:baseline;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding:8px 0}dd{font-weight:700;margin:0;text-align:right}footer{padding:0 4px}figure{margin:0}
-nav{display:flex;flex-wrap:wrap;gap:4px 12px;padding:0 4px}nav a{min-height:44px;display:inline-flex;align-items:center}main section{scroll-margin-top:12px}section details{padding:8px 0 0;border:0;border-top:1px solid var(--line);border-radius:0}ul{padding-left:20px;margin:5px 0}li+li{margin-top:6px}tbody th{font-weight:500}table th,table td{overflow-wrap:anywhere}</style>
+nav{display:flex;flex-wrap:wrap;gap:4px 12px;padding:0 4px}nav a{min-height:44px;display:inline-flex;align-items:center}main section{scroll-margin-top:12px}section details{padding:8px 0 0;border:0;border-top:1px solid var(--line);border-radius:0}ul{padding-left:20px;margin:5px 0}li+li{margin-top:6px}tbody th{font-weight:500}table th,table td{overflow-wrap:anywhere}.trend{display:block;width:100%;max-width:520px;height:auto;margin:8px auto}.trend text{fill:var(--muted);font-size:11px;font-weight:550}.trend .gridline{stroke:var(--line);stroke-width:1}.trend polyline{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}.trend circle,.trend g text{fill:currentColor}</style>
 </head>
 <body>
 <main>
@@ -22,7 +22,7 @@ nav{display:flex;flex-wrap:wrap;gap:4px 12px;padding:0 4px}nav a{min-height:44px
 <h2>每花 1 美元算力费用，产生多少收入？</h2>
 <p class="metric">1.72 美元 <small>Q3 / Q2 为 2.08 美元</small></p>
 <figure>
-<canvas aria-label="收入除以算力与基础设施费用，从2025年第一季度0.40倍升至2026年第二季度2.08倍，第三季度回落至1.72倍" id="ratio" role="img"></canvas>
+<svg aria-label="收入除以算力与基础设施费用，从2025年第一季度0.40倍升至2026年第二季度2.08倍，第三季度回落至1.72倍" class="trend" id="ratio" role="img" viewbox="0 0 312 195"><line class="gridline" x1="32" x2="284" y1="165.0" y2="165.0"></line><text text-anchor="end" x="25" y="169.0">0</text><line class="gridline" x1="32" x2="284" y1="137.0" y2="137.0"></line><text text-anchor="end" x="25" y="141.0">0.5</text><line class="gridline" x1="32" x2="284" y1="109.0" y2="109.0"></line><text text-anchor="end" x="25" y="113.0">1</text><line class="gridline" x1="32" x2="284" y1="81.0" y2="81.0"></line><text text-anchor="end" x="25" y="85.0">1.5</text><line class="gridline" x1="32" x2="284" y1="53.0" y2="53.0"></line><text text-anchor="end" x="25" y="57.0">2</text><line class="gridline" x1="32" x2="284" y1="25.0" y2="25.0"></line><text text-anchor="end" x="25" y="29.0">2.5</text><text text-anchor="middle" x="32" y="186">25Q1</text><text text-anchor="middle" x="74" y="186">25Q2</text><text text-anchor="middle" x="116" y="186">25Q3</text><text text-anchor="middle" x="158" y="186">25Q4</text><text text-anchor="middle" x="200" y="186">26Q1</text><text text-anchor="middle" x="242" y="186">26Q2</text><text text-anchor="middle" x="284" y="186">26Q3</text><g class="green"><polyline points="32,142.69 74,133.29 116,127.19 158,126.21 200,86.78 242,48.58 284,68.73"></polyline><circle cx="32" cy="142.69" r="3"></circle><circle cx="74" cy="133.29" r="3"></circle><circle cx="116" cy="127.19" r="3"></circle><text text-anchor="middle" x="116" y="117.19">0.68×</text><circle cx="158" cy="126.21" r="3"></circle><circle cx="200" cy="86.78" r="3"></circle><circle cx="242" cy="48.58" r="3"></circle><text text-anchor="middle" x="242" y="38.58">2.08×</text><circle cx="284" cy="68.73" r="3"></circle><text text-anchor="middle" x="284" y="58.73">1.72×</text></g></svg>
 <figcaption class="muted">总收入 ÷ 算力与基础设施费用。同比从 <strong>0.68 升至 1.72 倍</strong>，但较 Q2 的 2.08 倍回落约 17%。</figcaption>
 </figure>
 </section>
@@ -30,7 +30,7 @@ nav{display:flex;flex-wrap:wrap;gap:4px 12px;padding:0 4px}nav a{min-height:44px
 <h2>收入与算力费用的季度趋势</h2>
 <div class="legend"><span class="green">● 收入</span><span class="orange">● 算力与基础设施费用</span><span class="muted">十亿美元</span></div>
 <figure>
-<canvas aria-label="最近七季收入及算力费用，第三季度收入169.56亿美元，算力费用98.63亿美元" id="growth" role="img"></canvas>
+<svg aria-label="最近七季收入及算力费用，第三季度收入169.56亿美元，算力费用98.63亿美元" class="trend" id="growth" role="img" viewbox="0 0 312 195"><line class="gridline" x1="32" x2="284" y1="165.0" y2="165.0"></line><text text-anchor="end" x="25" y="169.0">0</text><line class="gridline" x1="32" x2="284" y1="130.0" y2="130.0"></line><text text-anchor="end" x="25" y="134.0">5</text><line class="gridline" x1="32" x2="284" y1="95.0" y2="95.0"></line><text text-anchor="end" x="25" y="99.0">10</text><line class="gridline" x1="32" x2="284" y1="60.0" y2="60.0"></line><text text-anchor="end" x="25" y="64.0">15</text><line class="gridline" x1="32" x2="284" y1="25.0" y2="25.0"></line><text text-anchor="end" x="25" y="29.0">20</text><text text-anchor="middle" x="32" y="186">25Q1</text><text text-anchor="middle" x="74" y="186">25Q2</text><text text-anchor="middle" x="116" y="186">25Q3</text><text text-anchor="middle" x="158" y="186">25Q4</text><text text-anchor="middle" x="200" y="186">26Q1</text><text text-anchor="middle" x="242" y="186">26Q2</text><text text-anchor="middle" x="284" y="186">26Q3</text><g class="green"><polyline points="32,162.37 74,159.49 116,155.33 158,150.72 200,131.88 242,84.11 284,46.31"></polyline><circle cx="32" cy="162.37" r="3"></circle><circle cx="74" cy="159.49" r="3"></circle><circle cx="116" cy="155.33" r="3"></circle><circle cx="158" cy="150.72" r="3"></circle><circle cx="200" cy="131.88" r="3"></circle><text text-anchor="middle" x="200" y="121.88">4.7</text><circle cx="242" cy="84.11" r="3"></circle><text text-anchor="middle" x="242" y="74.11">11.6</text><circle cx="284" cy="46.31" r="3"></circle><text text-anchor="middle" x="284" y="36.31">17.0</text></g><g class="orange"><polyline points="32,158.39 74,155.27 116,150.67 158,144.38 200,141.29 242,126.09 284,95.96"></polyline><circle cx="32" cy="158.39" r="3"></circle><circle cx="74" cy="155.27" r="3"></circle><circle cx="116" cy="150.67" r="3"></circle><circle cx="158" cy="144.38" r="3"></circle><circle cx="200" cy="141.29" r="3"></circle><text text-anchor="middle" x="200" y="156.29">3.4</text><circle cx="242" cy="126.09" r="3"></circle><text text-anchor="middle" x="242" y="141.09">5.6</text><circle cx="284" cy="95.96" r="3"></circle><text text-anchor="middle" x="284" y="110.96">9.9</text></g></svg>
 <figcaption class="muted">Q3 环比，收入增 <strong>46.7%</strong>，算力费用增 <strong>77.5%</strong>。由于收入基数更大，新增收入 54.01 亿美元，仍高于新增算力费用 43.05 亿美元，两者差额扩大 10.96 亿美元。</figcaption>
 </figure>
 </section>
@@ -73,60 +73,6 @@ nav{display:flex;flex-wrap:wrap;gap:4px 12px;padding:0 4px}nav a{min-height:44px
 </details>
 <footer class="muted">财务截至 2026 年 9 月 30 日。<a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm">SEC 最终招股书</a> · <a href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering">发行公告</a><br/>不构成投资建议。</footer>
 </main>
-<script>
-const labels = ['25Q1', '25Q2', '25Q3', '25Q4', '26Q1', '26Q2', '26Q3'];
-const revenue = [0.376, 0.787, 1.382, 2.040, 4.731, 11.555, 16.956];
-const compute = [0.944, 1.390, 2.047, 2.945, 3.387, 5.558, 9.863];
-const ratio = revenue.map((value, index) => value / compute[index]);
-function draw(id, series, ticks, format) {
-  const canvas = document.getElementById(id);
-  const width = canvas.clientWidth, height = canvas.clientHeight;
-  const dpr = window.devicePixelRatio || 1;
-  canvas.width = width * dpr;
-  canvas.height = height * dpr;
-  const ctx = canvas.getContext('2d');
-  ctx.scale(dpr, dpr);
-  const theme = getComputedStyle(canvas);
-  const color = name => theme.getPropertyValue(name).trim();
-  const left = 29, right = width - 22, top = 29, bottom = height - 27;
-  const x = i => left + (right - left) * i / (labels.length - 1);
-  const y = v => bottom - v / ticks.at(-1) * (bottom - top);
-  ctx.font = '12px system-ui';
-  ctx.textBaseline = 'middle';
-  ticks.forEach(tick => {
-    ctx.strokeStyle = color('--line');
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(left, y(tick));
-    ctx.lineTo(right, y(tick));
-    ctx.stroke();
-    ctx.fillStyle = color('--muted');
-    ctx.textAlign = 'right';
-    ctx.fillText(tick, left - 6, y(tick));
-  });
-  ctx.textAlign = 'center';
-  labels.forEach((label, i) => ctx.fillText(label, x(i), height - 10));
-  series.forEach(({ values, tint, offset }) => {
-    ctx.strokeStyle = ctx.fillStyle = color(tint);
-    ctx.lineWidth = 2.5;
-    ctx.beginPath();
-    values.forEach((value, i) => i ? ctx.lineTo(x(i), y(value)) : ctx.moveTo(x(i), y(value)));
-    ctx.stroke();
-    values.forEach((value, i) => {
-      ctx.beginPath();
-      ctx.arc(x(i), y(value), 3.5, 0, Math.PI * 2);
-      ctx.fill();
-      if ([0, 4, 5, 6].includes(i)) ctx.fillText(format(value), x(i), y(value) + offset);
-    });
-  });
-}
-function renderCharts() {
-  draw('ratio', [{values: ratio, tint: '--green', offset: -13}], [0, 0.5, 1, 1.5, 2, 2.5], v => v.toFixed(2) + '×');
-  draw('growth', [{values: revenue, tint: '--green', offset: -13}, {values: compute, tint: '--orange', offset: 13}], [0, 5, 10, 15, 20], v => v.toFixed(1));
-}
-renderCharts();
-new ResizeObserver(renderCharts).observe(document.querySelector('main'));
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', renderCharts);
-</script>
+
 </body>
 </html>
